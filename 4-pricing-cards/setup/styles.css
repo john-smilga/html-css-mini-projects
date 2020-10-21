@@ -44,8 +44,7 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
   /* ui design colors */
-  --ui-clr-body-bcg: #c5bdeb;
-  --ui-clr-primary: #6e59ce;
+  --ui-clr-body-bcg: #f4f2fd;
 }
 /*
 =============== 
@@ -127,110 +126,6 @@ p {
 }
 /*
 =============== 
-Sign up Form
+Pricing Cards
 ===============
 */
-.services {
-  display: none;
-}
-main {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.container {
-  background: var(--clr-white);
-  padding: 2.5rem;
-  border-radius: var(--radius);
-  width: 90vw;
-  max-width: var(--max-width);
-}
-.form h2 {
-  margin-bottom: 2rem;
-  font-weight: 500;
-}
-.form-control {
-  margin-bottom: 2rem;
-}
-.form-control label {
-  display: block;
-  text-transform: capitalize;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-.form-input {
-  border: 1px solid var(--clr-grey-9);
-  border-radius: var(--radius);
-  padding: 1.25rem;
-  width: 100%;
-  color: var(--clr-grey-3);
-  font-size: 1rem;
-}
-.form-input::placeholder {
-  color: var(--clr-grey-5);
-  text-transform: capitalize;
-}
-.updates {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 0.5rem;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-input[type='checkbox'] {
-  /* border: 1px solid var(--clr-grey-9); */
-  width: 1.75rem;
-  height: 1.75rem;
-}
-.updates p {
-  margin-bottom: 0;
-  text-transform: capitalize;
-  color: var(--clr-grey-5);
-}
-.btn {
-  background: var(--ui-clr-primary);
-  display: block;
-  width: 100%;
-  color: var(--clr-white);
-  border-radius: var(--radius);
-  border-color: transparent;
-  padding: 1.25rem 0;
-  text-transform: capitalize;
-  font-size: 1rem;
-  cursor: pointer;
-}
-@media screen and (min-width: 992px) {
-  .services {
-    display: block;
-    padding: 4rem;
-    background: linear-gradient(135deg, #ba91e9 0%, #6d58ce 100%);
-    border-radius: var(--radius);
-    color: var(--clr-white);
-    min-height: 785px;
-  }
-  .service {
-    max-width: 240px;
-    margin-bottom: 2.5rem;
-  }
-  .icon {
-    width: 2rem;
-    height: 2rem;
-    display: block;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.23);
-    display: grid;
-    place-items: center;
-    margin-bottom: 1.75rem;
-  }
-  .service h4 {
-    font-weight: 500;
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 4rem;
-    align-items: center;
-  }
-}

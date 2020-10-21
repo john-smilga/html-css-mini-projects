@@ -44,8 +44,7 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
   /* ui design colors */
-  --ui-clr-body-bcg: #c5bdeb;
-  --ui-clr-primary: #6e59ce;
+  --ui-clr-body-bcg: #f4f2fd;
 }
 /*
 =============== 
@@ -127,110 +126,97 @@ p {
 }
 /*
 =============== 
-Sign up Form
+Pricing Cards
 ===============
 */
-.services {
-  display: none;
-}
-main {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .container {
-  background: var(--clr-white);
-  padding: 2.5rem;
-  border-radius: var(--radius);
   width: 90vw;
-  max-width: var(--max-width);
+  margin: 4rem auto;
+  max-width: 992px;
+  display: grid;
+  gap: 4rem;
 }
-.form h2 {
-  margin-bottom: 2rem;
-  font-weight: 500;
-}
-.form-control {
-  margin-bottom: 2rem;
-}
-.form-control label {
-  display: block;
-  text-transform: capitalize;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-.form-input {
-  border: 1px solid var(--clr-grey-9);
+
+.card {
+  background: var(--clr-white);
   border-radius: var(--radius);
-  padding: 1.25rem;
-  width: 100%;
-  color: var(--clr-grey-3);
-  font-size: 1rem;
+  padding: 4rem 3.5rem;
+  border-radius: 1.25rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
-.form-input::placeholder {
+.card header {
+  padding-left: 4rem;
+  margin-bottom: 5rem;
+}
+.card-title {
+  margin-bottom: 2rem;
+}
+.card-title p {
   color: var(--clr-grey-5);
   text-transform: capitalize;
 }
-.updates {
+.card-price {
+  font-size: 52px;
+  line-height: 65px;
+  font-weight: 700;
+}
+.services {
+  padding-left: 4rem;
+  margin-bottom: 3rem;
+}
+.service {
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 0.5rem;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
-input[type='checkbox'] {
-  /* border: 1px solid var(--clr-grey-9); */
-  width: 1.75rem;
-  height: 1.75rem;
-}
-.updates p {
+.service p {
   margin-bottom: 0;
+  color: var(--clr-grey-3);
+  font-size: 18px;
   text-transform: capitalize;
-  color: var(--clr-grey-5);
+}
+.icon {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  background: var(--clr-black);
+  border-radius: 50%;
+  color: var(--clr-white);
 }
 .btn {
-  background: var(--ui-clr-primary);
+  background: var(--clr-black);
+  color: var(--clr-white);
   display: block;
   width: 100%;
-  color: var(--clr-white);
-  border-radius: var(--radius);
-  border-color: transparent;
-  padding: 1.25rem 0;
   text-transform: capitalize;
+  padding: 1rem;
+  border-radius: var(--radius);
   font-size: 1rem;
+  border-radius: 1.75rem;
+  border-color: transparent;
+  font-weight: 600;
+  letter-spacing: var(--spacing);
   cursor: pointer;
 }
-@media screen and (min-width: 992px) {
-  .services {
-    display: block;
-    padding: 4rem;
-    background: linear-gradient(135deg, #ba91e9 0%, #6d58ce 100%);
-    border-radius: var(--radius);
-    color: var(--clr-white);
-    min-height: 785px;
-  }
-  .service {
-    max-width: 240px;
-    margin-bottom: 2.5rem;
-  }
-  .icon {
-    width: 2rem;
-    height: 2rem;
-    display: block;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.23);
-    display: grid;
-    place-items: center;
-    margin-bottom: 1.75rem;
-  }
-  .service h4 {
-    font-weight: 500;
-  }
-
+.card-black {
+  background: var(--clr-black);
+  color: var(--clr-white);
+}
+.card-black .btn,
+.card-black .icon {
+  background: var(--clr-white);
+  color: var(--clr-black);
+}
+.card-black .service p {
+  color: var(--clr-white);
+}
+@media screen and (min-width: 576px) {
   .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 4rem;
-    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(428px, 1fr));
+    /* align-items: start; */
   }
 }
