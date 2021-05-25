@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 /* fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap');
 html {
   font-size: 100%;
@@ -41,6 +42,7 @@ html {
   --green-dark: #0f5132;
 
   /* fonts  */
+
   --headingFont: 'Roboto', sans-serif;
   --bodyFont: 'Nunito', sans-serif;
   --smallText: 0.7em;
@@ -250,9 +252,39 @@ ul {
   margin: 0 auto;
   margin-top: -1rem;
 }
-
 /*
 =============== 
-Nav
+Counter
 ===============
 */
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.container {
+  text-align: center;
+}
+.container h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+#value {
+  font-size: 7rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.counter-btn {
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--textColor);
+  border: 2px solid var(--textColor);
+  margin: 0.5rem;
+}
+.counter-btn:hover {
+  background: var(--textColor);
+  color: var(--white);
+}
