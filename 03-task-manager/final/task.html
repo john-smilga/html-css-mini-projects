@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- main  -->
+    <link rel="stylesheet" href="./main.css" />
+
+    <title>Edit Task</title>
+  </head>
+  <body>
+    <form class="form single-task-form">
+      <h4>Edit Task</h4>
+      <div class="form-control">
+        <label class="form-label">Task ID</label>
+        <p class="task-edit-id">123456789</p>
+      </div>
+      <div class="form-control">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          name="name"
+          class="form-input task-edit-name"
+          value="walk the dog"
+        />
+      </div>
+      <div class="form-control">
+        <label for="completed" class="form-label">completed</label>
+        <input type="checkbox" name="completed" class="task-edit-completed" />
+      </div>
+      <button type="submit" class="btn btn-block task-edit-btn">edit</button>
+      <div class="form-alert text-small">there was an error</div>
+    </form>
+    <a href="index.html" class="btn back-link">back to tasks</a>
+  </body>
+</html>
