@@ -287,7 +287,9 @@ Task Manager
     border-bottom-right-radius: var(--borderRadius);
   }
 }
-
+.text-success {
+  color: var(--green-dark);
+}
 /*************
      TASKS
 *************/
@@ -353,10 +355,6 @@ Task Manager
   color: var(--red-dark);
 }
 
-.text-success {
-  color: var(--green-dark);
-}
-
 /*************
    SINGLE TASK PAGE
 *************/
@@ -384,9 +382,6 @@ Task Manager
   font-size: 1rem;
 }
 
-.task-edit-completed {
-  width: auto;
-}
 .back-link {
   display: block;
   width: 250px;
