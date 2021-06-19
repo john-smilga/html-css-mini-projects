@@ -281,10 +281,13 @@ nav {
 }
 .logo {
   margin-bottom: 0;
+  font-weight: 700;
 }
 .logo span {
   color: var(--primary-500);
-  font-weight: 700;
+}
+.social-icons {
+  display: none;
 }
 .links a {
   color: var(--grey-700);
@@ -300,19 +303,24 @@ nav {
   color: var(--primary-500);
   padding-left: 1.5rem;
 }
-.social-icons {
-  display: none;
-}
+
 .links {
+  margin: 0;
   height: 0;
   overflow: hidden;
-  margin: 0;
   transition: var(--transition);
+  /* todo height overflow transition */
+  /* get height 160px 10rem*/
 }
+
 .show-links {
   height: 10rem;
 }
+
 @media screen and (min-width: 800px) {
+  .nav-toggle {
+    display: none;
+  }
   .nav-center {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -323,9 +331,6 @@ nav {
   }
   .nav-header {
     padding: 0;
-  }
-  .nav-toggle {
-    display: none;
   }
   .links {
     height: auto;
