@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 /* fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap');
 html {
   font-size: 100%;
@@ -251,9 +252,8 @@ ul {
   margin: 0 auto;
   margin-top: -1rem;
 }
-
 /*
 =============== 
-Nav
+Navbar
 ===============
 */
