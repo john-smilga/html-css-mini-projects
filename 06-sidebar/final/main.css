@@ -257,6 +257,7 @@ ul {
 Sidebar
 ===============
 */
+
 .sidebar-toggle {
   position: fixed;
   top: 2rem;
@@ -269,9 +270,11 @@ Sidebar
   cursor: pointer;
   animation: bounce 2s ease-in-out infinite;
 }
+
 .sidebar-toggle:hover {
   color: var(--primary-700);
 }
+
 @keyframes bounce {
   0% {
     transform: scale(1);
@@ -281,6 +284,32 @@ Sidebar
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition);
+  transform: translate(-100%);
+}
+.show-sidebar {
+  transform: translate(0);
+}
+/* todo show sidebar */
+
+@media screen and (min-width: 676px) {
+  .sidebar {
+    width: 400px;
   }
 }
 
@@ -294,20 +323,16 @@ Sidebar
   font-size: 1.75rem;
   background: transparent;
   border-color: transparent;
-  color: var(--primary-500);
+  color: var(--red-dark);
   transition: var(--transition);
   cursor: pointer;
-  color: var(--red-dark);
 }
 .close-btn:hover {
-
   transform: rotate(360deg);
 }
 .logo {
-  justify-self: center;
   height: 40px;
 }
-
 .links a {
   display: block;
   font-size: 1.5rem;
@@ -316,45 +341,26 @@ Sidebar
   color: var(--grey-500);
   transition: var(--transition);
 }
+
 .links a:hover {
   background: var(--primary-300);
   color: var(--primary-600);
   padding-left: 1.75rem;
 }
+
 .social-icons {
-  justify-self: center;
   display: flex;
   padding-bottom: 2rem;
+  justify-content: center;
+  gap: 0 1rem;
 }
 .social-icons a {
   font-size: 1.5rem;
-  margin: 0 0.5rem;
+  /* margin: 0 0.5rem; */
   color: var(--primary-500);
   transition: var(--transition);
 }
+
 .social-icons a:hover {
   color: var(--primary-300);
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--white);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  row-gap: 1rem;
-  box-shadow: var(--red-dark);
-  transition: var(--transition);
-  transform: translate(-100%);
-}
-.show-sidebar {
-  transform: translate(0);
-}
-@media screen and (min-width: 676px) {
-  .sidebar {
-    width: 400px;
-  }
 }
