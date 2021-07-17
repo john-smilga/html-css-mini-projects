@@ -269,42 +269,46 @@ Modal
   padding: 4rem 0;
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-2);
-  text-align: center;
   width: 90vw;
+  text-align: center;
   max-width: var(--fixed-width);
 }
-
 .modal-overlay {
   position: fixed;
-  top: 0;
+  /* background: rgba(73, 166, 233, 0.5); */
+  /* background: rgba(100, 92, 255, 0.5); */
+  background: rgba(0, 0, 0, 0.6);
+  /* top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(73, 166, 233, 0.5);
+  bottom: 0;
+  right: 0; */
+  inset: 0;
+  /* width: 100%;
+  height: 100%; */
   display: grid;
   place-items: center;
-  transition: all 1.5s ease-in-out;
   visibility: hidden;
   z-index: -10;
+  transition: all 1s ease-in-out;
   /* display: none; */
 }
-/* OPEN/CLOSE MODAL */
 .open-modal {
+  /* display: grid; */
   visibility: visible;
   z-index: 10;
-  /* display: grid; */
 }
+
 .modal-container {
   background: var(--white);
   border-radius: var(--borderRadius);
   width: 90vw;
   height: 35vh;
   max-width: var(--fixed-width);
-  text-align: center;
   display: grid;
   place-items: center;
   position: relative;
 }
+
 .close-btn {
   position: absolute;
   top: 1rem;
